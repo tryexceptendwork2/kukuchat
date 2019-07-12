@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.application.options.optionwindow">
+   <children>
+      <Label contentDisplay="RIGHT" text="Nickname">
+         <graphic>
+            <TextField fx:id="edNickname" />
+         </graphic>
+      </Label>
+      <Button fx:id="buttonCansel" cancelButton="true" maxWidth="70.0" minWidth="70.0" mnemonicParsing="false" onAction="#btCansel" text="Cansel" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="4.0" />
+      <Button fx:id="buttonOK" maxWidth="70.0" minWidth="70.0" mnemonicParsing="false" onAction="#btOK" text="OK" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="78.0" />
+   </children>
+</AnchorPane>

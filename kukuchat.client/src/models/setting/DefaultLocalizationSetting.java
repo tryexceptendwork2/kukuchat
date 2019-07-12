@@ -38,7 +38,7 @@ public class DefaultLocalizationSetting implements ILocalizationSetting {
      */
     @Override
     public String getDateTimeMessLabel(LocalDateTime messTime) {
-        return "["+messTime.format(dtFormatter)+"]: ";
+        return "["+messTime.format(dtFormatter)+"] ";
     }
     /**
      * Функция возвращает метку времени сообщения в нужном формате. Берет текущую дату устройства.

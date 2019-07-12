@@ -1,8 +1,7 @@
 package models.factory;
 
 import models.setting.ILocalizationSetting;
-
-import java.util.Properties;
+import models.viewer.IChatViewer;
 
 /**
  * Абстрактная фабрика для построения чата.
@@ -15,4 +14,5 @@ public interface IChatFactory {
      * @return объект соответствующий интефейсу {@link ILocalizationSetting}
      */
     ILocalizationSetting createLocalizationSetting();
+    IChatViewer createChatView();
 }

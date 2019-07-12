@@ -2,6 +2,9 @@ package models.factory;
 
 import models.setting.DefaultLocalizationSetting;
 import models.setting.ILocalizationSetting;
+import models.viewer.IChatViewer;
+import models.viewer.TextAreaChatViewer;
+import models.viewer.WebViewChatView;
 
 import java.util.Properties;
 
@@ -18,5 +21,10 @@ public class DefaultChatFactory implements IChatFactory {
     @Override
     public ILocalizationSetting createLocalizationSetting() {
         return new DefaultLocalizationSetting();
+    }
+
+    @Override
+    public IChatViewer createChatView() {
+        return new WebViewChatView();
     }
 }
