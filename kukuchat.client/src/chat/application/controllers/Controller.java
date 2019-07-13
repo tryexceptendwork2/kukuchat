@@ -1,6 +1,5 @@
-package chat.application;
+package chat.application.controllers;
 
-import chat.application.options.optionwindow;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +10,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import models.ChatAppication;
 import javafx.stage.Modality;
 
-import javax.swing.*;
 import java.io.*;
 
 public class Controller {
@@ -27,14 +24,14 @@ public class Controller {
     public String userName = "anonim";
 
     private FXMLLoader loader = new FXMLLoader();
-    private optionwindow optionDialog ;
+    private OptionEdit optionDialog ;
     public Parent optionDialogParent;
     private Stage optionDialogStage;
 
     @FXML
     private void initialize(){
         try{
-            loader.setLocation(getClass().getResource("options/optionwindow.fxml"));
+            loader.setLocation(getClass().getResource("../fxmlwindow/optionwindow.fxml"));
             optionDialogParent = loader.load();
             optionDialog = loader.getController();
         }catch (IOException ex){
@@ -68,10 +65,12 @@ public class Controller {
             optionDialogStage.initModality(Modality.WINDOW_MODAL);
             optionDialogStage.initOwner(((Node)actionEvent.getSource()).getScene().getWindow());
         }
+        optionDialog.setUserName(userName);
         optionDialogStage.showAndWait();
         Node source = (Node)actionEvent.getSource();
         Stage stage = (Stage)source.getScene().getWindow();
         stage.setTitle(optionDialog.getUserName());
+        userName = optionDialog.getUserName();
         chatAppication.setNickname(optionDialog.getUserName());
     }
 }

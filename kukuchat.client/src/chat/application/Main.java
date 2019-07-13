@@ -1,5 +1,6 @@
 package chat.application;
 
+import chat.application.controllers.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,7 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader root = new FXMLLoader(Main.class.getResource("chat.application.fxml"));
+        FXMLLoader root = new FXMLLoader(Main.class.getResource("fxmlwindow/chat.application.fxml"));
         AnchorPane page = (AnchorPane)root.load();
         // получить ссылку на контроллер
         Controller controller = root.getController();

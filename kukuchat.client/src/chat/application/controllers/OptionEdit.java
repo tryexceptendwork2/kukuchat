@@ -1,11 +1,11 @@
-package chat.application.options;
+package chat.application.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class optionwindow {
+public class OptionEdit {
     public TextField edNickname;
 
     private String userName;
